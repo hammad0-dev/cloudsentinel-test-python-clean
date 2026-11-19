@@ -1,11 +1,10 @@
-import os
-
 from flask import Flask, jsonify
 from flask_wtf.csrf import CSRFProtect
 from waitress import serve
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY") or os.urandom(32)
+# Secrets come only from the environment (FLASK_SECRET_KEY), never from source.
+app.config.from_prefixed_env()
 CSRFProtect(app)
 
 

@@ -8,4 +8,4 @@ Differences from `cloudsentinel-test-python-flask`, which Sonar blocks:
 - Served by waitress instead of the Flask dev server bound to `0.0.0.0` (`python:S8392`).
 
 Run locally: `pip install -r requirements.txt && python app.py`, then `curl http://127.0.0.1:8080/health`.
-test1
+test1 again
